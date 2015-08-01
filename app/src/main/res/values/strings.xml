@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">C4droidHelper</string>
+    <string name="homepage">Home Page</string>
+    <string name="message">Messages</string>
+    <string name="category">Categories</string>
+    <string name="explore">Explore</string>
 </resources>
