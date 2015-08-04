@@ -7,7 +7,7 @@ android {
 
     defaultConfig {
         applicationId "codehz.c4droidhelper"
-        minSdkVersion 9
+        minSdkVersion 10
         targetSdkVersion 22
         versionCode 1
         versionName "1.0"
@@ -23,12 +23,15 @@ android {
     }
 }
 
-apply plugin: 'com.android.databinding'
-
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'com.android.support:appcompat-v7:22.2.1'
+    compile 'com.android.support:recyclerview-v7:22.2.1'
+    compile 'com.android.support:cardview-v7:22.2.1'
     compile 'com.android.support:design:22.2.1'
+    compile 'com.squareup.okhttp:okhttp:2.3.0'
+    compile 'com.squareup.okhttp:okhttp-apache:2.3.0'
+    compile 'com.kii:cloud-sdk:2.2.0:library@aar'
     compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
 }
 buildscript {
@@ -42,4 +45,7 @@ buildscript {
 }
 repositories {
     mavenCentral()
+    maven {
+        url 'http://dl.bintray.com/kii/KiiAndroidSDK'
+    }
 }
