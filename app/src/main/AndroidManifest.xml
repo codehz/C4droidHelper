@@ -21,6 +21,10 @@
             </intent-filter>
         </activity>
 
+        <activity
+            android:name=".ContentActivity"
+            android:label="Content" />
+
     </application>
 
 </manifest>

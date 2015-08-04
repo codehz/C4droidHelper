@@ -1,9 +1,17 @@
 package codehz.c4droidhelper
 
 import android.os.Bundle
+import android.support.v7.app.AppCompatActivity
+import codehz.c4droidhelper.view.ContentDataView
 
-public class ContentActivity : BaseActivity() {
+public class ContentActivity : AppCompatActivity() {
+    var content: ContentDataView? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        this setContentView R.layout.activity_content
+        content = (this findViewById R.id.content) as ContentDataView
+        val intent = getIntent()
+        content?.setContent(intent getStringExtra "content")
     }
 }
