@@ -36,8 +36,8 @@ open class BaseDataView(val activity: Activity, source: DataSource<Repo>) : Recy
             titleView setText titleText
             preview setText previewText
             card setOnClickListener { card ->
-                activity.startActivity(Intent(activity, javaClass<ContentActivity>())
-                        .putExtra("content", contentText))
+                activity startActivity Intent(activity, javaClass<ContentActivity>())
+                        .putExtra("content", contentText).putExtra("title", titleText)
             }
         }
     }
